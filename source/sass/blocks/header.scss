@@ -1,0 +1,74 @@
+.header {
+  background-image: url("../img/mask.png");
+  background-color: $background-grey;
+  min-height: 878px;
+  overflow-x: hidden;
+}
+
+.header__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  // max-width: 1411px;
+  margin: 0 auto;
+  margin-bottom: 230px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 705px;
+    height: 515px;
+    top: 210px;
+    right: -55px;
+    background-image: url("../img/printed-boards.png");
+    z-index: 2;
+  }
+}
+
+.header__wrapper div {
+  display: flex;
+  justify-content: space-between;
+  min-width: 45.7%;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: space-between;
+  width: 204px;
+}
+
+.header__wrapper a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.header__wrapper p {
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $basic-white;
+  padding: 0 18px;
+}
+
+.page-header__call-link {
+  font-family: "Roboto Condensed", "PT Mono", monospace;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $basic-white;
+  border: 1px solid $basic-white;
+  border-radius: 5px;
+  padding: 0 17px;
+}

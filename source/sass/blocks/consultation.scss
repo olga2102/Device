@@ -1,0 +1,65 @@
+.consultation {
+  position: relative;
+  width: 51%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 654px;
+    height: 643px;
+    top: -196px;
+    right: -94%;
+    background-image: url("../img/triangles.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.consultation h2 {
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $basic-white;
+  margin: 0 0 31px;
+}
+
+.consultation p {
+  position: relative;
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 34px;
+  color: $basic-white;
+  padding-left: 95px;
+  margin: 0 0 37px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 66px;
+    height: 2px;
+    background-color: $basic-white;
+    top: 15px;
+    left: 0;
+  }
+}
+
+.consultation a {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $basic-white;
+  background-color: $background-blue;
+  border-radius: 5px;
+  padding: 18px 45px;
+  margin: 0 0 31px;
+}

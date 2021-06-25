@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="fonts/robotocondensed-regular.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="fonts/robotocondensed-bold.woff2" as="font" rel="preload" crossorigin="anonymous">
 </head>
-<body>
-    <h1>Hello!</h1>
+
+<body class="page__body">
+  <header class="header">
+    <div class="container">
+    <div class="header__wrapper">
+    <a class="header__logo logo">
+      <img src="img/brain.svg" width="52" height="52"
+        alt="Логотип организации по производству печатных плат с изображением мозга">
+      <img src="img/logo.svg" width="134" height="45" alt="Текстовый логотип организации по производству печатных плат">
+    </a>
+    <div>
+      <a class="page-header__mail-link" href="mailto:info@sd.ru">
+        <svg class="page-header__pic" width="19" height="14">
+          <use xlink:href="img/sprite.svg#mail"></use>
+        </svg>
+        <p>info@sd.ru</p>
+      </a>
+      <a class="page-header__tel-link" href="tel:+7(495)0005252">
+        <svg class="page-footer__pic" width="18" height="18">
+          <use xlink:href="img/sprite.svg#phone"></use>
+        </svg>
+        <p>+7 (495) 000 52 52</p>
+      </a>
+      <a class="page-header__call-link href="#">Заказать звонок</a>
+    </div>
+  </div>
+  <section class="consultation">
+<h2>Печатные платы</h2>
+<p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+<a href="#">Получить бесплатную консультацию</a>
+  </section>
+    </div>
+  </header>
+  <h1>Hello!</h1>
 </body>
+
 </html>

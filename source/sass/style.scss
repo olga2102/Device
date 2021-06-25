@@ -1,4 +1,9 @@
-h1 {
-  color: red;
-  background-color: green;
-}
+@import "./globals/variables.scss";
+@import "./globals/mixin.scss";
+@import "./globals/font-face.scss";
+@import "./globals/viewports.scss";
+@import "./globals/base.scss";
+@import "./globals/container.scss";
+@import "./blocks/page.scss";
+@import "./blocks/header.scss";
+@import "./blocks/consultation.scss";
