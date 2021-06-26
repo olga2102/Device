@@ -1,0 +1,43 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+  width: 204px;
+  height: 86px;
+
+  @media (max-width: $tablet-width) {
+    width: 202px;
+    height: 52px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 33px;
+    height: 33px;
+  }
+
+  &--footer {
+    width: 216px;
+    height: 52px;
+  }
+}
+
+.logo__img {
+  &--text {
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+
+  &--picture {
+    @media (max-width: $mobile-width) {
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+  &--footer {
+    @media (max-width: $mobile-width) {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}

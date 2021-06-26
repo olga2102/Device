@@ -3,6 +3,14 @@
   background-color: $background-grey;
   min-height: 878px;
   overflow-x: hidden;
+
+  @media (max-width: $tablet-width) {
+    min-height: 686px;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 645px;
+  }
 }
 
 .header__wrapper {
@@ -12,6 +20,17 @@
   // max-width: 1411px;
   margin: 0 auto;
   margin-bottom: 230px;
+  padding-top: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 115px;
+    padding-top: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 15px;
+    margin-bottom: 240px;
+  }
 
   &::after {
     position: absolute;
@@ -21,7 +40,24 @@
     top: 210px;
     right: -55px;
     background-image: url("../img/printed-boards.png");
-    z-index: 2;
+    background-repeat: no-repeat;
+    // z-index: 0;
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/printed-boards-tablet.png");
+      width: 465px;
+      height: 340px;
+      top: 75px;
+      right: -231px;
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("../img/printed-boards-mobile.png");
+      width: 465px;
+      height: 340px;
+      top: 85px;
+      right: -190px;
+    }
   }
 }
 
@@ -29,15 +65,28 @@
   display: flex;
   justify-content: space-between;
   min-width: 45.7%;
+
+  @media (max-width: $tablet-width) {
+    justify-content: flex-end;
+  }
 }
 
-.header__logo {
-  display: flex;
-  justify-content: space-between;
-  width: 204px;
+.header__wrapper p {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $basic-white;
+  padding: 0 18px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
-.header__wrapper a {
+.header__link {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,29 +95,31 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
-}
 
-.header__wrapper p {
-  font-family: "PT Mono", monospace;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 18px;
-  color: $basic-white;
-  padding: 0 18px;
-}
+  @media (max-width: $tablet-width) {
+    &:not(:last-child) {
+      margin-left: 33px;
+    }
+  }
 
-.page-header__call-link {
-  font-family: "Roboto Condensed", "PT Mono", monospace;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $basic-white;
-  border: 1px solid $basic-white;
-  border-radius: 5px;
-  padding: 0 17px;
+  &--call {
+    font-family: "Roboto Condensed", "PT Mono", monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $basic-white;
+    border: 1px solid $basic-white;
+    border-radius: 5px;
+    padding: 0 17px;
+    height: 45px;
+    align-self: center;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
 }

@@ -6,6 +6,16 @@
   justify-content: center;
   align-items: center;
 
+  @media (max-width: $tablet-width) {
+    width: 70%;
+    padding-left: 63px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding-left: 0;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -15,6 +25,7 @@
     right: -94%;
     background-image: url("../img/triangles.svg");
     background-repeat: no-repeat;
+    z-index: 0;
   }
 }
 
@@ -26,9 +37,19 @@
   text-transform: uppercase;
   color: $basic-white;
   margin: 0 0 31px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 40px;
+    line-height: 47px;
+  }
 }
 
-.consultation p {
+.consultation__text {
   position: relative;
   font-family: "PT Mono", monospace;
   font-style: normal;
@@ -39,6 +60,17 @@
   padding-left: 95px;
   margin: 0 0 37px;
 
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 156.8%;
+    padding-left: 55px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 50px;
+    margin: 0 0 30px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -47,6 +79,10 @@
     background-color: $basic-white;
     top: 15px;
     left: 0;
+
+    @media (max-width: $tablet-width) {
+      width: 33px;
+    }
   }
 }
 
@@ -62,4 +98,31 @@
   border-radius: 5px;
   padding: 18px 45px;
   margin: 0 0 31px;
+
+  @media (max-width: $tablet-width) {
+    padding: 18px 32px;
+    margin-left: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    margin-left: 0;
+    padding: 2px 29px;
+  }
+}
+
+.consultation__link {
+  @media (max-width: $mobile-width) {
+    &--long {
+      display: none;
+    }
+  }
+
+  &--short {
+    display: none;
+
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
+  }
 }
