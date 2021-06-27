@@ -1,0 +1,89 @@
+.advantages {
+  margin-bottom: 110px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.advantages ul {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 30px;
+  max-width: 1160px;
+  // padding: 0 20px;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.advantages__item {
+  border: 1px solid $light-grey;
+  border-left: 2px solid $blue;
+  padding: 37px 38px 25px 37px;
+
+  @media (max-width: $tablet-width) {
+    padding: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: $blue;
+  }
+}
+
+.advantages dl {
+  margin: 0;
+}
+
+.advantages dt {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+  color: $blue;
+  margin-bottom: 15px;
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+    line-height: 140.62%;
+  }
+}
+
+.advantages dd {
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $font-grey;
+  margin: 0 0 15px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.advantages svg {
+  fill: $blue;
+  margin-bottom: 23px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 14px;
+  }
+}
+
+.advantages__item:hover svg,
+.advantages__item:hover dd,
+.advantages__item:hover dt {
+  fill: $basic-white;
+  color: $basic-white;
+}

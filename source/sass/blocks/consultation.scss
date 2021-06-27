@@ -94,10 +94,11 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $basic-white;
+  align-self: flex-start;
   background-color: $background-blue;
   border-radius: 5px;
   padding: 18px 45px;
-  margin: 0 0 31px;
+  margin: 0 0 31px 92px;
 
   @media (max-width: $tablet-width) {
     padding: 18px 32px;

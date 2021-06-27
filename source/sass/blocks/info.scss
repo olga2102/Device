@@ -1,0 +1,74 @@
+.info {
+  margin-bottom: 100px;
+}
+
+.info__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 20%;
+  padding-right: 11%;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 220px;
+    height: 317px;
+    top: 0;
+    left: 5%;
+    background-image: url("../img/year.svg");
+    background-repeat: no-repeat;
+
+    @media (max-width: $tablet-width) {
+      left: -5%;
+    }
+
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+}
+
+.info h2 {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $font-grey;
+  margin: 0 0 18px;
+}
+
+.info p {
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $font-grey;
+  margin: 0 0 18px;
+
+  // @media (max-width: $tablet-width) {
+  //   text-overflow: ellipsis;
+  //   white-space: nowrap;
+  //   overflow: hidden;
+  // }
+}
+
+.info a {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $blue;
+  border: 1px solid $blue;
+  border-radius: 5px;
+  padding: 13px 50px;
+  margin: 25px 0 0;
+}

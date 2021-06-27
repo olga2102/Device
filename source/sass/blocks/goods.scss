@@ -1,0 +1,138 @@
+.goods {
+  background-color: $background-grey;
+  padding: 93px 0 127px;
+
+  @media (max-width: $tablet-width) {
+    padding: 53px 0 78px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 53px 0 64px;
+  }
+}
+
+.goods h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $basic-white;
+  margin: 0 0 47px 120px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 140.62%;
+    margin: 0 86px 47px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 140.62%;
+  }
+}
+
+.goods ul {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.goods li {
+  &:not(:last-child) {
+    margin-right: 30px;
+
+    @media (max-width: $tablet-width) {
+      margin-right: 0;
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.goods a {
+  font-size: 20px;
+  line-height: 30px;
+  color: $basic-white;
+}
+
+.goods__picture {
+  position: relative;
+  background-repeat: no-repeat;
+  width: 370px;
+  height: 620px;
+  box-shadow: inset 0 0 500px rgba(27, 45, 55, 1);
+  background-color: rgba(196, 196, 196, 1);
+
+  @media (max-width: $tablet-width) {
+    width: 720px;
+    height: 256px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 290px;
+  }
+
+  &--production {
+    background-image: url("../img/production.jpg");
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/production-tablet.jpg");
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("../img/production-mobile.jpg");
+    }
+  }
+
+  &--installation {
+    background-image: url("../img/installation.jpg");
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/installation-tablet.jpg");
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("../img/installation-mobile.jpg");
+    }
+  }
+
+  &--accessories {
+    background-image: url("../img/accessories.jpg");
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/accessories-tablet.jpg");
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("../img/accessories-mobile.jpg");
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 63px;
+    height: 63px;
+    bottom: 0;
+    right: 0;
+    background-color: $blue;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.goods p {
+  display: inline-block;
+  // padding: 50px 152px 50px 45px;
+  margin: 53px 45px;
+  width: 160px;
+
+  @media (max-width: $tablet-width) {
+    margin: 43px 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 23px 35px;
+  }
+}
