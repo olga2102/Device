@@ -1,24 +1,73 @@
 .advantages {
-  margin-bottom: 110px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
-  @media (max-width: $tablet-width) {
-    margin-bottom: 60px;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 636px;
+    height: 636px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -33%) rotate(90deg);
+    background-image: url("../img/triangle-middle.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
 .advantages ul {
   @include list-reset;
+  position: relative;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   gap: 30px;
   max-width: 1160px;
-  // padding: 0 20px;
+  padding: 109px 0 120px;
   margin: 0 auto;
 
   @media (max-width: $mobile-width) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 340px;
+    height: 330px;
+    bottom: 0;
+    right: -285px;
+    background-image: url("../img/grey-triangle.svg");
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 340px;
+    height: 330px;
+    top: 35px;
+    left: -190px;
+    background-image: url("../img/grey-triangle.svg");
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    z-index: 0;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -26,6 +75,8 @@
   border: 1px solid $light-grey;
   border-left: 2px solid $blue;
   padding: 37px 38px 25px 37px;
+  background-color: $basic-white;
+  cursor: pointer;
 
   @media (max-width: $tablet-width) {
     padding: 20px;

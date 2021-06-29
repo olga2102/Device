@@ -26,6 +26,22 @@
     background-image: url("../img/triangles.svg");
     background-repeat: no-repeat;
     z-index: 0;
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/triangles-tablet.svg");
+      width: 505px;
+      height: 482px;
+      top: -208px;
+      right: -415px;
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("../img/triangles-mobile.svg");
+      width: 505px;
+      height: 482px;
+      top: -291px;
+      right: -349px;
+    }
   }
 }
 
@@ -109,6 +125,10 @@
     width: 100%;
     margin-left: 0;
     padding: 2px 29px;
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 }
 

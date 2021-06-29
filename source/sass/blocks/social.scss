@@ -13,3 +13,12 @@
     margin-right: 15px;
   }
 }
+
+.social__item svg {
+  fill: $social-grey;
+}
+
+.social__link:hover svg {
+  fill: $background-grey;
+  border: $background-grey;
+}

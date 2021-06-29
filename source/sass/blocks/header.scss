@@ -3,7 +3,7 @@
   background-color: $background-grey;
   min-height: 878px;
   overflow-x: hidden;
-  margin-bottom: 109px;
+  // margin-bottom: 109px;
 
   @media (max-width: $tablet-width) {
     min-height: 686px;
@@ -42,22 +42,35 @@
     right: -55px;
     background-image: url("../img/printed-boards.png");
     background-repeat: no-repeat;
+    background-size: cover;
     // z-index: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/printed-boards@2x.png");
+    }
 
     @media (max-width: $tablet-width) {
       background-image: url("../img/printed-boards-tablet.png");
       width: 465px;
       height: 340px;
-      top: 75px;
+      top: 89px;
       right: -231px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/printed-boards-tablet@2x.png");
+      }
     }
 
     @media (max-width: $mobile-width) {
       background-image: url("../img/printed-boards-mobile.png");
-      width: 465px;
-      height: 340px;
+      width: 301px;
+      height: 220px;
       top: 85px;
-      right: -190px;
+      right: -15px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/printed-boards-mobile@2x.png");
+      }
     }
   }
 }
@@ -73,12 +86,6 @@
 }
 
 .header__wrapper p {
-  font-family: "PT Mono", "Courier New", monospace;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 18px;
-  color: $basic-white;
   padding: 0 18px;
 
   @media (max-width: $tablet-width) {
@@ -87,7 +94,6 @@
 }
 
 .header__link {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,11 +102,16 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+  color: $basic-white;
 
   @media (max-width: $tablet-width) {
     &:not(:last-child) {
       margin-left: 33px;
     }
+  }
+
+  &:hover {
+    color: $blue;
   }
 
   &--call {
@@ -118,6 +129,10 @@
     padding: 0 17px;
     height: 45px;
     align-self: center;
+
+    &:hover {
+      color: $blue;
+    }
 
     @media (max-width: $tablet-width) {
       display: none;

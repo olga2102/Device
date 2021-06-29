@@ -1,5 +1,27 @@
 .info {
   margin-bottom: 100px;
+  position: relative;
+  overflow-x: hidden;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 636px;
+    height: 636px;
+    bottom: 0;
+    left: -267px;
+    background-image: url("../img/triangle-middle.svg");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transform: rotate(-90deg);
+    z-index: -1;
+
+    @media (max-width: $tablet-width) {
+      bottom: 233px;
+      left: 46%;
+      transform: rotate(90deg);
+    }
+  }
 }
 
 .info__wrapper {
@@ -52,11 +74,11 @@
   color: $font-grey;
   margin: 0 0 18px;
 
-  // @media (max-width: $tablet-width) {
-  //   text-overflow: ellipsis;
-  //   white-space: nowrap;
-  //   overflow: hidden;
-  // }
+  @media (max-width: $tablet-width) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 93px;
+  }
 }
 
 .info a {
@@ -71,4 +93,9 @@
   border-radius: 5px;
   padding: 13px 50px;
   margin: 25px 0 0;
+
+  &:hover {
+    color: $blue-hover;
+    border: 1px solid $blue-hover;
+  }
 }

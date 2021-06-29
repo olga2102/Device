@@ -1,0 +1,136 @@
+.modal {
+  display: none;
+  width: 490px;
+  min-height: 605px;
+  background-color: $blue;
+  padding: 35px 40px;
+  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.modal h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 140.62%;
+  color: $basic-white;
+  margin: 0 0 25px;
+}
+
+.modal p {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $basic-white;
+  margin: 0 0 25px;
+}
+
+.modal input {
+  width: 100%;
+  background-color: $opacity-white;
+  border: none;
+  margin-bottom: 30px;
+  padding: 15px 25px;
+
+  &:hover {
+    outline: 1px solid $blue-hover;
+  }
+}
+
+.modal textarea {
+  width: 100%;
+  min-height: 104px;
+  margin-bottom: 30px;
+  padding: 15px 25px;
+  background-color: $opacity-white;
+  border: none;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    outline: 1px solid $blue-hover;
+  }
+}
+
+.modal input::placeholder,
+.modal textarea::placeholder {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $basic-white;
+}
+
+.modal button {
+  @include button-reset;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $basic-white;
+  width: 100%;
+  border: 1px solid $basic-white;
+  border-radius: 5px;
+  padding: 14px 69px;
+  margin-bottom: 35px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 35px;
+  }
+
+  &:hover {
+    border: 1px solid $blue-hover;
+    color: $blue-hover;
+  }
+}
+
+.modal input[type="checkbox"] + span {
+  opacity: 0.8;
+  width: 100%;
+  display: block;
+  padding: 0 38px;
+}
+
+
+.modal input[type="checkbox"] + span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $basic-white;
+}
+
+input[type="checkbox"]:checked + span::before {
+  background-image: url("../img/tick.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.modal label {
+  position: relative;
+  display: block;
+  font-family: "PT Mono", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $basic-white;
+  cursor: pointer;
+}

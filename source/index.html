@@ -28,13 +28,13 @@
             </svg>
             <p>info@sd.ru</p>
           </a>
-          <a class="header__link" href="tel:+7(495)0005252">
+          <a class="header__link" href="tel:+74950005252">
             <svg width="18" height="18">
               <use xlink:href="img/sprite.svg#phone"></use>
             </svg>
             <p>+7 (495) 000 52 52</p>
           </a>
-          <a class="header__link header__link--call" href="#">Заказать звонок</a>
+          <a class="header__link header__link--call" href="#"><p>Заказать звонок</p></a>
         </div>
       </div>
       <section class="consultation">
@@ -48,6 +48,7 @@
     </div>
   </header>
   <main>
+    <h1 class="visually-hidden">Прозводство и монтаж печатных плат</h1>
     <section class="advantages">
       <div class="container">
         <h2 class="visually-hidden">Преимущества</h2>
@@ -114,53 +115,58 @@
             РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
             светотехники России.
           </p>
-          <a>Подробнее</a>
+          <a href="">Подробнее</a>
         </div>
       </div>
     </section>
     <section class="goods">
       <div class="container">
-      <h2>Service Device предлагает следующие товары и услуги</h2>
-      <ul>
-        <li>
-          <a href="#">
-            <div class="goods__picture goods__picture--production">
-              <p>Производство печатных плат</p>
-            </div>
+        <h2>Service Device предлагает следующие товары и услуги</h2>
+        <ul>
+          <li>
+            <a class="goods__picture goods__picture--production" href="#">
+                <p>Производство печатных плат</p>
             </a>
-        </li>
-        <li>
-          <a href="#">
-            <div  class="goods__picture goods__picture--installation">
-              <p>Монтаж печатных плат</p>
-            </div>
+          </li>
+          <li>
+            <a class="goods__picture goods__picture--installation" href="#">
+                <p>Монтаж печатных плат</p>
             </a>
-        </li>
-        <li>
-          <a href="#">
-            <div  class="goods__picture goods__picture--accessories">
-              <p>Комплектующие для светотехники</p>
-            </div>
+          </li>
+          <li>
+            <a class="goods__picture goods__picture--accessories" href="#">
+                <p>Комплектующие для светотехники</p>
             </a>
-        </li>
-      </ul>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="feedback">
       <div class="container">
-        <div>
-          <h2>Остались вопросы? Задайте их нам!</h2>
-          <p>Мы проконсультируем Вас бесплатно</p>
-          <form>
-            <label for="name" aria-label="Поле для ввода имени"></label>
-            <input type="name" name="name" id="name" placeholder="Имя">
-            <label aria-label="Поле для ввода номера телефона"></label>
-            <input type="tel" name="tel" id="tel" placeholder="Телефон">
-            <textarea placeholder="Ваш вопрос"></textarea>
-            <button>Задать вопрос</button>
-            <input type="checkbox" id="agree" checked>
-            <label for="agree">Я согласен на обработку  персональных данных</label>
-          </form>
+        <div class="feedback__wrapper">
+          <div class="feedback__form">
+            <h2>Остались вопросы? Задайте их нам!</h2>
+            <p>Мы проконсультируем Вас бесплатно</p>
+            <form>
+              <fieldset>
+                <label for="name" aria-label="Поле для ввода имени">
+                  <input type="text" name="name" id="name" placeholder="Имя">
+                </label>
+                <label for="tel" aria-label="Поле для ввода номера телефона">
+                  <input type="tel" name="tel" id="tel" placeholder="Телефон">
+                </label>
+              </fieldset>
+              <label for="question" aria-label="Поле для ввода вопроса"></label>
+              <textarea id="question" name="question" placeholder="Ваш вопрос"></textarea>
+              <div class="feedback__inner">
+              <button type="submit">Задать вопрос</button>
+              <label for="agree">
+              <input class="visually-hidden" type="checkbox" id="agree" checked>
+              <span>Я согласен на обработку персональных данных</span>
+            </label>
+            </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -232,9 +238,9 @@
         <div class="footer__inner">
           <h2>Наш офис</h2>
           <p class="footer__text footer__text--address">г. Мытищи, Олимпийский проспект, д.10</p>
-          <a>+7 (495) 589-40-50</a>
-          <a>+7 (925) 003-87-67</a>
-          <a>+7 (926) 926-080-79</a>
+          <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+          <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+          <a href="tel:+792692608079">+7 (926) 926-080-79</a>
         </div>
       </div>
     </div>
@@ -249,6 +255,26 @@
       </div>
     </div>
   </footer>
+  <section class="modal">
+    <button class="modal__button close-button" aria-label="Закрыть форму"></button>
+    <h2>Закажите звонок</h2>
+    <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+    <form>
+      <label for="user" aria-label="Поле для ввода имени">
+        <input type="text" name="user" id="user" placeholder="Имя" required>
+      </label>
+      <label for="phone" aria-label="Поле для ввода номера телефона">
+        <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+      </label>
+    <label for="query" aria-label="Поле для ввода вопроса"></label>
+    <textarea id="query" name="query" placeholder="Ваш вопрос"></textarea>
+    <button type="submit">Отправить</button>
+    <label for="yes">
+    <input class="visually-hidden" type="checkbox" id="yes" checked required>
+    <span>Я согласен на обработку персональных данных</span>
+    </label>
+  </form>
+    </section>
 </body>
 
 </html>
