@@ -1,5 +1,5 @@
 .info {
-  margin-bottom: 100px;
+  margin-bottom: 110px;
   position: relative;
   overflow-x: hidden;
 
@@ -9,7 +9,7 @@
     width: 636px;
     height: 636px;
     bottom: 0;
-    left: -267px;
+    left: -250px;
     background-image: url("../img/triangle-middle.svg");
     background-repeat: no-repeat;
     overflow: hidden;
@@ -22,6 +22,10 @@
       transform: rotate(90deg);
     }
   }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .info__wrapper {
@@ -30,8 +34,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-left: 20%;
+  padding-left: 21%;
   padding-right: 11%;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 26%;
+  }
 
   @media (max-width: $mobile-width) {
     padding: 0;
@@ -43,12 +51,14 @@
     width: 220px;
     height: 317px;
     top: 0;
-    left: 5%;
+    left: 7%;
     background-image: url("../img/year.svg");
     background-repeat: no-repeat;
 
     @media (max-width: $tablet-width) {
-      left: -5%;
+      width: 361px;
+      height: 317px;
+      left: -2%;
     }
 
     @media (max-width: $mobile-width) {

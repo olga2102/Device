@@ -44,8 +44,10 @@
 }
 
 .goods li {
+  width: auto;
+
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 2.1%;
 
     @media (max-width: $tablet-width) {
       margin-right: 0;

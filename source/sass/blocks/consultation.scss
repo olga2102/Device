@@ -22,7 +22,7 @@
     width: 654px;
     height: 643px;
     top: -196px;
-    right: -94%;
+    right: -98%;
     background-image: url("../img/triangles.svg");
     background-repeat: no-repeat;
     z-index: 0;
@@ -31,7 +31,7 @@
       background-image: url("../img/triangles-tablet.svg");
       width: 505px;
       height: 482px;
-      top: -208px;
+      top: -188px;
       right: -415px;
     }
 
@@ -74,12 +74,13 @@
   line-height: 34px;
   color: $basic-white;
   padding-left: 95px;
-  margin: 0 0 37px;
+  margin: 0 0 40px;
 
   @media (max-width: $tablet-width) {
     font-size: 18px;
     line-height: 156.8%;
     padding-left: 55px;
+    margin: 0 0 54px;
   }
 
   @media (max-width: $mobile-width) {
@@ -113,11 +114,11 @@
   align-self: flex-start;
   background-color: $background-blue;
   border-radius: 5px;
-  padding: 18px 45px;
+  padding: 0 45px;
   margin: 0 0 31px 92px;
 
   @media (max-width: $tablet-width) {
-    padding: 18px 32px;
+    padding: 0 32px;
     margin-left: 45px;
   }
 

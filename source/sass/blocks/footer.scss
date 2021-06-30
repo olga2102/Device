@@ -5,20 +5,33 @@
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
 
   @media (max-width: $tablet-width) {
     flex-wrap: wrap;
+    margin-bottom: 0;
   }
 
   @media (max-width: $mobile-width) {
     justify-content: center;
   }
+
+  &--upper {
+    margin-bottom: 60px;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .footer__inner {
+  position: relative;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
 
   &--social {
     @media (max-width: $tablet-width) {
@@ -28,7 +41,7 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid $border-grey;
-      padding-bottom: 27px;
+      padding-bottom: 18px;
 
       &::before,
       &::after {
@@ -64,11 +77,51 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 30px;
+    margin-bottom: 36px;
   }
 
   @media (max-width: $mobile-width) {
     width: 100%;
+  }
+
+  &--sections {
+    @media (max-width: $tablet-width) {
+      border: none;
+      align-items: flex-start;
+
+      @media (max-width: $mobile-width) {
+        position: relative;
+        border-bottom: 1px solid $border-grey;
+        padding-bottom: 27px;
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          width: calc(50vw - 50%);
+          height: 1px;
+          background-color: $border-grey;
+        }
+
+        &::before {
+          bottom: -1px;
+          left: -25px;
+
+          @media (max-width: $mobile-width) {
+            left: -15px;
+          }
+        }
+
+        &::after {
+          bottom: -1px;
+          right: -25px;
+
+          @media (max-width: $mobile-width) {
+            right: -15px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -84,6 +137,7 @@
 
   @media (max-width: $mobile-width) {
     display: none;
+    padding-top: 27px;
   }
 }
 
@@ -119,6 +173,10 @@
   text-transform: uppercase;
   color: $font-color;
   margin: 0 0 29px;
+
+  @media (max-width: $mobile-width) {
+    margin: 0;
+  }
 }
 
 .footer a {
@@ -165,6 +223,7 @@
     font-size: 15px;
     line-height: 25px;
     text-transform: none;
+    margin: 0;
   }
 
   &--rights {
@@ -175,8 +234,12 @@
 }
 
 .footer__copyright {
-  padding: 15px 0;
+  padding: 10px 0;
   border-top: 1px solid $border-grey;
+
+  @media (max-width: $tablet-width) {
+    padding: 18px 0;
+  }
 
   @media (max-width: $mobile-width) {
     text-align: center;
@@ -193,5 +256,86 @@
 
   @media (max-width: $mobile-width) {
     margin: 25px 0;
+  }
+}
+
+.footer__button {
+  @include button-reset;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+
+  &--closed {
+    @media (max-width: $mobile-width) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        content: "";
+        width: 16px;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, 50%);
+        background-color: $grey;
+      }
+
+      &::before {
+        content: "";
+        width: 16px;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, 50%) rotate(90deg);
+        background-color: $grey;
+      }
+    }
+  }
+
+  &--opened {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "";
+      width: 16px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, 50%);
+      background-color: $grey;
+    }
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+    padding-top: 30px;
+  }
+}
+
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  min-width: 815px;
+
+  @media (max-width: $tablet-width) {
+    min-width: auto;
   }
 }

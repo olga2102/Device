@@ -20,8 +20,8 @@
   justify-content: space-between;
   // max-width: 1411px;
   margin: 0 auto;
-  margin-bottom: 230px;
-  padding-top: 30px;
+  margin-bottom: 210px;
+  padding-top: 20px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 115px;
@@ -38,8 +38,8 @@
     content: "";
     width: 705px;
     height: 515px;
-    top: 210px;
-    right: -55px;
+    top: 255px;
+    right: -75px;
     background-image: url("../img/printed-boards.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,7 +53,7 @@
       background-image: url("../img/printed-boards-tablet.png");
       width: 465px;
       height: 340px;
-      top: 89px;
+      top: 112px;
       right: -231px;
 
       @media (min-resolution: 2dppx) {
@@ -78,7 +78,7 @@
 .header__wrapper div {
   display: flex;
   justify-content: space-between;
-  min-width: 45.7%;
+  min-width: 46.7%;
 
   @media (max-width: $tablet-width) {
     justify-content: flex-end;
@@ -114,6 +114,10 @@
     color: $blue;
   }
 
+  &--phone {
+    margin-left: 35px;
+  }
+
   &--call {
     font-family: "Roboto Condensed", "PT Mono", monospace;
     font-style: normal;
@@ -126,7 +130,7 @@
     color: $basic-white;
     border: 1px solid $basic-white;
     border-radius: 5px;
-    padding: 0 17px;
+    padding: 0 9px;
     height: 45px;
     align-self: center;
 
