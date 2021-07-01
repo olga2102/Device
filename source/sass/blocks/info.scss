@@ -84,11 +84,11 @@
   color: $font-grey;
   margin: 0 0 18px;
 
-  @media (max-width: $tablet-width) {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    height: 93px;
-  }
+  // @media (max-width: $tablet-width) {
+  //   text-overflow: ellipsis;
+  //   overflow: hidden;
+  //   height: 93px;
+  // }
 }
 
 .info a {
@@ -107,5 +107,20 @@
   &:hover {
     color: $blue-hover;
     border: 1px solid $blue-hover;
+  }
+}
+
+.info span {
+  @media (max-width: $tablet-width) {
+    display: none;
+    position: relative;
+  }
+}
+
+.info p + p {
+  &::after {
+    position: absolute;
+    content: "..";
+    display: inline;
   }
 }
