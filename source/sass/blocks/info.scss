@@ -24,7 +24,11 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 80px;
+    margin-bottom: 88px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 62px;
   }
 }
 
@@ -35,10 +39,11 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding-left: 21%;
-  padding-right: 11%;
+  padding-right: 10%;
 
   @media (max-width: $tablet-width) {
     padding-left: 26%;
+    padding-right: 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -73,6 +78,16 @@
   line-height: 51px;
   color: $font-grey;
   margin: 0 0 18px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 22px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 140.62%;
+    margin: 0 0 18px;
+  }
 }
 
 .info p {
@@ -84,11 +99,9 @@
   color: $font-grey;
   margin: 0 0 18px;
 
-  // @media (max-width: $tablet-width) {
-  //   text-overflow: ellipsis;
-  //   overflow: hidden;
-  //   height: 93px;
-  // }
+  @media (max-width: $mobile-width) {
+    margin: 0 0 42px;
+  }
 }
 
 .info a {
@@ -118,6 +131,14 @@
 }
 
 .info p + p {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 19px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 10px;
+  }
+
   &::after {
     position: absolute;
     content: "..";

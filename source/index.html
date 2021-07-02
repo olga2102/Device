@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
 
 <head>
   <meta charset="UTF-8">
@@ -42,16 +42,17 @@
       <section class="consultation">
         <h2>Печатные платы</h2>
         <p class="consultation__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a href="#">
+        <a href="#feedback">
           <p class="consultation__link consultation__link--long">Получить бесплатную консультацию</p>
           <p class="consultation__link consultation__link--short">Бесплатная консультация</p>
         </a>
       </section>
+      <a class="header__scroll" href="#advantages">Скролл вниз</a>
     </div>
   </header>
   <main>
     <h1 class="visually-hidden">Прозводство и монтаж печатных плат</h1>
-    <section class="advantages">
+    <section class="advantages" id="advantages">
       <div class="container">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="advantages__list">
@@ -145,7 +146,7 @@
         </div>
       </div>
     </section>
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <div class="container">
         <div class="feedback__wrapper">
           <div class="feedback__form">
@@ -177,8 +178,8 @@
   </main>
   <footer class="footer">
     <div class="container">
-      <div class="footer__wrapper footer__wrapper--upper">
-        <div class="footer__inner footer__inner--social">
+      <div class="footer__inner">
+        <div class="footer__promo">
           <a class="footer__logo logo logo--footer">
             <img class="logo__img logo__img--footer" src="img/brain.svg" width="52" height="52"
               alt="Логотип организации по производству печатных плат с изображением мозга">
@@ -213,10 +214,10 @@
             </li>
           </ul>
         </div>
-        <div class="footer__inner footer__inner--sections">
-          <h2>Разделы сайта</h2>
-          <button class="footer__button footer__button--closed"></button>
-          <ul class="footer__list">
+        <nav class="footer__nav">
+          <h2 id="title">Разделы сайта</h2>
+          <!-- <button class="footer__button footer__button--closed"></button> -->
+          <ul class="footer__list" id="accordion">
             <li class="footer__item">
               <a href="#">О компании</a>
             </li>
@@ -239,12 +240,12 @@
               <a href="#">Контакты</a>
             </li>
           </ul>
-        </div>
-        <div class="footer__inner">
-          <h2>Наш офис</h2>
-          <button class="footer__button footer__button--closed"></button>
-          <div class="footer__contacts">
-            <p class="footer__text footer__text--address">г. Мытищи, Олимпийский проспект, д.10</p>
+        </nav>
+        <div class="footer__contacts">
+          <h2 id="title">Наш офис</h2>
+          <!-- <button class="footer__button footer__button--closed"></button> -->
+          <div id="accordion">
+            <address>г. Мытищи, Олимпийский проспект, д.10</address>
             <a href="tel:+74955894050">+7 (495) 589-40-50</a>
             <a href="tel:+79250038767">+7 (925) 003-87-67</a>
             <a href="tel:+792692608079">+7 (926) 926-080-79</a>
@@ -254,12 +255,10 @@
     </div>
     <div class="footer__copyright">
       <div class="container">
-        <div class="footer__wrapper">
-          <div class="footer__wrap">
+        <div class="footer__copyright-inner">
             <p class="footer__text footer__text--rights">Все права защищены</p>
             <p class="footer__text footer__text--rights">1999-2018 SD Service Devices</p>
             <p class="footer__text">Условия конфиденциальности</p>
-          </div>
           <p class="footer__text">Developed by wow studio </p>
         </div>
       </div>
@@ -289,6 +288,7 @@
   </section>
   <script src="js/imask.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/accordion.js"></script>
 </body>
 
 </html>

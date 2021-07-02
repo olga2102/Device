@@ -1,7 +1,6 @@
 .social {
   @include list-reset;
   display: flex;
-  margin-top: 45px;
 
   @media (max-width: $tablet-width) {
     margin-top: 0;
@@ -12,6 +11,11 @@
   &:not(:last-child) {
     margin-right: 15px;
   }
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
 }
 
 .social__item svg {

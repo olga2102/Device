@@ -1,0 +1,9 @@
+.accordion {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+}

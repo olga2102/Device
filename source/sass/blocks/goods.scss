@@ -1,13 +1,13 @@
 .goods {
   background-color: $background-grey;
-  padding: 93px 0 127px;
+  padding: 90px 0 127px;
 
   @media (max-width: $tablet-width) {
-    padding: 53px 0 78px;
+    padding: 53px 0 40px;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 53px 0 64px;
+    padding: 53px 0 34px;
   }
 }
 
@@ -33,6 +33,7 @@
   @media (max-width: $mobile-width) {
     font-size: 28px;
     line-height: 140.62%;
+    margin: 0 0 39px 0;
   }
 }
 
@@ -69,6 +70,10 @@
     &:not(:last-child) {
       margin-right: 0;
     }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
   }
 }
 

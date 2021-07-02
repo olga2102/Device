@@ -6,12 +6,14 @@
   overflow: hidden;
 
   @media (max-width: $tablet-width) {
-    padding: 83px 0 100px;
-    margin-bottom: 25px;
+    min-height: 664px;
+    padding: 75px 0 0;
+    margin-bottom: 17px;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 33px 0 41px;
+    min-height: 640px;
+    padding: 33px 0 38px;
   }
 }
 
@@ -67,11 +69,15 @@
 }
 
 .feedback__form {
-  width: 48.7%;
+  width: 48%;
 
   @media (max-width: $tablet-width) {
     width: 100%;
     padding: 0 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
   }
 }
 
@@ -85,7 +91,7 @@
   @media (max-width: $tablet-width) {
     font-size: 32px;
     line-height: 140.62%;
-    margin: 0 0 18px;
+    margin: 0 0 14px;
   }
 
   @media (max-width: $mobile-width) {
@@ -105,6 +111,10 @@
   @media (max-width: $tablet-width) {
     margin: 0 0 53px;
   }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 24px;
+  }
 }
 
 .feedback fieldset {
@@ -114,6 +124,10 @@
   border: none;
   padding: 0;
   margin-bottom: 30px;
+
+  @media (max-width: $mobile-width) {
+    margin: 0;
+  }
 }
 
 .feedback label {
@@ -157,6 +171,7 @@
 
   @media (max-width: $mobile-width) {
     margin-bottom: 30px;
+    min-height: 104px;
   }
 }
 
@@ -191,6 +206,7 @@
 
   @media (max-width: $mobile-width) {
     margin-bottom: 35px;
+    margin-right: 0;
   }
 
   &:hover {
@@ -235,5 +251,6 @@ input[type="checkbox"]:focus + span::before {
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
+    align-items: flex-start;
   }
 }

@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   background-image: url("../img/mask.png");
   background-color: $background-grey;
   min-height: 878px;
@@ -119,7 +120,7 @@
   }
 
   &--call {
-    font-family: "Roboto Condensed", "PT Mono", monospace;
+    font-family: "Roboto Condensed", monospace;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -141,5 +142,25 @@
     @media (max-width: $tablet-width) {
       display: none;
     }
+  }
+}
+
+.header__scroll {
+  @include button-reset;
+  position: absolute;
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $basic-white;
+  cursor: pointer;
+  left: 11%;
+  bottom: 15%;
+  transform: rotate(-90deg);
+  opacity: 0.5;
+
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
