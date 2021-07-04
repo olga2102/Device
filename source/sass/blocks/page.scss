@@ -17,3 +17,32 @@
     overflow: hidden;
   }
 }
+
+.page__inner {
+  position: relative;
+  // overflow-x: hidden;
+  background-image: url("../img/triangle1.svg");
+  background-repeat: no-repeat;
+  background-position: 54% 51%;
+
+  @media (max-width: $tablet-width) {
+    background-position: -200% 60%;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 751px;
+    height: 714px;
+    top: 52%;
+    left: -174px;
+    transform: rotate(-180deg);
+    background-image: url("../img/triangle1.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+}

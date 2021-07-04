@@ -11,7 +11,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    min-height: 645px;
+    min-height: 647px;
   }
 }
 
@@ -162,5 +162,12 @@
 
   @media (max-width: $tablet-width) {
     display: none;
+  }
+}
+
+.header svg {
+  @media (max-width: $tablet-width) {
+    width: 24px;
+    height: 24px;
   }
 }

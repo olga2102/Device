@@ -1,31 +1,12 @@
 .advantages {
-  position: relative;
   overflow-x: hidden;
-  overflow-y: hidden;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 636px;
-    height: 636px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-34%, -32%) rotate(90deg);
-    background-image: url("../img/triangle-middle.svg");
-    background-repeat: no-repeat;
-    z-index: -1;
-
-    @media (max-width: $tablet-width) {
-      display: none;
-    }
-  }
 }
 
 .advantages ul {
   @include list-reset;
   position: relative;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 30px;
   max-width: 1170px;
@@ -33,7 +14,7 @@
   margin: 0 auto;
 
   @media (max-width: $tablet-width) {
-    padding: 50px 0 60px;
+    padding: 50px 0 55px;
   }
 
   @media (max-width: $mobile-width) {
@@ -79,21 +60,29 @@
   min-height: 299px;
   border: 1px solid $light-grey;
   border-left: 2px solid $blue;
-  padding: 37px 38px 25px 37px;
+  padding: 37px 41px 25px 37px;
   background-color: $basic-white;
   cursor: pointer;
 
   @media (max-width: $tablet-width) {
-    padding: 20px 20px 0;
+    padding: 27px 22px 20px;
     min-height: 232px;
   }
 
   @media (max-width: $mobile-width) {
     width: 100%;
-    padding: 20px 20px 15px;
+    padding: 25px 20px 25px;
+
+    &:nth-child(2n) {
+      padding-right: 15px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+
+    &:last-child {
+      padding-right: 18px;
     }
   }
 
@@ -121,7 +110,7 @@
   @media (max-width: $mobile-width) {
     font-size: 20px;
     line-height: 140.62%;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
   }
 }
 
@@ -144,7 +133,7 @@
   margin-bottom: 23px;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 14px;
+    margin-bottom: 5px;
   }
 }
 

@@ -25,7 +25,7 @@
   margin: 0 auto;
 
   @media (max-width: $tablet-width) {
-    padding: 0 31px;
+    padding: 0 30px 0 35px;
 
     @media (max-width: $mobile-width) {
       padding: 0;
@@ -91,7 +91,7 @@
   @media (max-width: $tablet-width) {
     font-size: 32px;
     line-height: 140.62%;
-    margin: 0 0 14px;
+    margin: 0 0 17px;
   }
 
   @media (max-width: $mobile-width) {
@@ -123,7 +123,7 @@
   flex-wrap: wrap;
   border: none;
   padding: 0;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
 
   @media (max-width: $mobile-width) {
     margin: 0;
@@ -187,6 +187,7 @@
 
 .feedback button {
   @include button-reset;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
@@ -200,8 +201,8 @@
   margin-right: 30px;
 
   @media (max-width: $tablet-width) {
-    padding: 14px 76px;
-    margin-right: 38px;
+    padding: 14px 85px;
+    margin-right: 35px;
   }
 
   @media (max-width: $mobile-width) {

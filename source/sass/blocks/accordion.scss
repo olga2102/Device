@@ -1,9 +1,11 @@
 .accordion {
   @media (max-width: $mobile-width) {
-    display: none;
-  }
+    &--opened {
+      display: grid;
+    }
 
-  &--opened {
-    display: block;
+    &--closed {
+      display: none;
+    }
   }
 }
