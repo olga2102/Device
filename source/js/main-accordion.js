@@ -34,12 +34,12 @@ titles.forEach(title => {
   title.addEventListener("click", changeClass)
 });
 
-  window.addEventListener('resize', function(e) {
+  window.addEventListener("resize", function(e) {
     if (window.innerWidth > 767) {
       titles.forEach(title => {
-        title.classList.remove('closed');
-        title.classList.add('opened');
-        title.nextElementSibling.style.display = 'grid'; // добавить класс
+        title.classList.remove("closed");
+        title.classList.add("opened");
+        title.nextElementSibling.style.display = "grid";
         title.removeEventListener("click", changeClass);
       });
     }

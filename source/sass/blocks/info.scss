@@ -1,26 +1,6 @@
 .info {
   margin-bottom: 110px;
 
-  // &::after {
-  //   position: absolute;
-  //   content: "";
-  //   width: 636px;
-  //   height: 636px;
-  //   bottom: 0;
-  //   left: -250px;
-  //   background-image: url("../img/triangle-middle.svg");
-  //   background-repeat: no-repeat;
-  //   overflow: hidden;
-  //   transform: rotate(-90deg);
-  //   z-index: -1;
-
-  //   @media (max-width: $tablet-width) {
-  //     bottom: 233px;
-  //     left: 46%;
-  //     transform: rotate(90deg);
-  //   }
-  // }
-
   @media (max-width: $tablet-width) {
     margin-bottom: 85px;
   }

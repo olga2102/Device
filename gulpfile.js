@@ -11,7 +11,7 @@ const webp = require("gulp-webp");
 const del = require("del");
 const sync = require("browser-sync").create();
 const concat = require('gulp-concat');
-const svgSprite = require('gulp-svg-sprite');
+const svgstore = require("gulp-svgstore");
 
 // Styles
 
@@ -69,24 +69,11 @@ const images = () => {
 exports.images = images;
 
 const sprite = () => {
-  return gulp.src("source/img/*.svg")
-      .pipe(svgSprite({
-              mode: {
-                  stack: {
-                      sprite: "../sprite.svg"
-                  }
-              },
-          }
-      ))
-      .pipe(gulp.dest("build/img"));
-}
-
-// const sprite = () => {
-//   return gulp.src("source/img/*.svg")
-//     .pipe(svgstore())
-//     .pipe(rename("sprite.svg"))
-//     .pipe(gulp.dest("build/img"));
-// };
+  return gulp.src("source/img/svg/*.svg")
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
+};
 
 exports.sprite = sprite;
 

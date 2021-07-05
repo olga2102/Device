@@ -91,9 +91,6 @@
     min-height: 256px;
   }
 
-  // box-shadow: inset 0 0 500px rgba(27, 45, 55, 1);
-  // opacity: 0.2;
-
   &::before {
     position: absolute;
     content: "";
@@ -199,7 +196,6 @@
 
 .goods p {
   display: inline-block;
-  // padding: 50px 152px 50px 45px;
   margin: 53px 45px;
   width: 160px;
 

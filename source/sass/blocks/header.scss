@@ -4,7 +4,6 @@
   background-color: $background-grey;
   min-height: 878px;
   overflow-x: hidden;
-  // margin-bottom: 109px;
 
   @media (max-width: $tablet-width) {
     min-height: 686px;
@@ -19,7 +18,6 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  // max-width: 1411px;
   margin: 0 auto;
   margin-bottom: 210px;
   padding-top: 20px;
@@ -44,7 +42,6 @@
     background-image: url("../img/printed-boards.png");
     background-repeat: no-repeat;
     background-size: cover;
-    // z-index: 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/printed-boards@2x.png");

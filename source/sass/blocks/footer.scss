@@ -122,12 +122,6 @@
   }
 }
 
-// .footer__accordion {
-//   display: flex;
-//   flex-direction: column;
-//   flex-wrap: wrap;
-// }
-
 .footer__accordion,
 .footer__list {
   @media (max-width: $mobile-width) {
@@ -349,83 +343,3 @@
     flex-direction: column;
   }
 }
-
-// .footer__button {
-//   @include button-reset;
-//   display: none;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   width: 16px;
-//   height: 16px;
-
-//   @media (max-width: $mobile-width) {
-//     display: block;
-//   }
-
-//   &--closed {
-//     @media (max-width: $mobile-width) {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-
-//       &::after {
-//         content: "";
-//         width: 16px;
-//         height: 1px;
-//         position: absolute;
-//         top: 50%;
-//         right: 50%;
-//         transform: translate(50%, 50%);
-//         background-color: $grey;
-//       }
-
-//       &::before {
-//         content: "";
-//         width: 16px;
-//         height: 1px;
-//         position: absolute;
-//         top: 50%;
-//         right: 50%;
-//         transform: translate(50%, 50%) rotate(90deg);
-//         background-color: $grey;
-//       }
-//     }
-//   }
-
-//   &--opened {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-
-//     &::after {
-//       content: "";
-//       width: 16px;
-//       height: 1px;
-//       position: absolute;
-//       top: 50%;
-//       right: 50%;
-//       transform: translate(50%, 50%);
-//       background-color: $grey;
-//     }
-//   }
-// }
-
-// .footer__contacts {
-//   display: flex;
-//   flex-direction: column;
-
-//   @media (max-width: $mobile-width) {
-//     padding-top: 30px;
-//   }
-// }
-
-// .footer__wrap {
-//   display: flex;
-//   justify-content: space-between;
-//   min-width: 815px;
-
-//   @media (max-width: $tablet-width) {
-//     min-width: auto;
-//   }
-// }
