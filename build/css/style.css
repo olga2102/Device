@@ -1057,6 +1057,7 @@ img {
 
 .goods p {
   display: inline-block;
+  vertical-align: middle;
   margin: 53px 45px;
   width: 160px; }
   @media (max-width: 1023px) {
