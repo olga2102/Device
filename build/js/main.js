@@ -1,5 +1,6 @@
 const accordions = document.querySelectorAll(".accordion");
 const titles = document.querySelectorAll(".footer__title");
+const MIN_WIDTH_SCREEN = 767;
 
 const removeClasses = () => {
   if (window.innerWidth < 768) {
@@ -35,7 +36,7 @@ titles.forEach(title => {
 });
 
   window.addEventListener("resize", function(e) {
-    if (window.innerWidth > 767) {
+    if (window.innerWidth > MIN_WIDTH_SCREEN) {
       titles.forEach(title => {
         title.classList.remove("closed");
         title.classList.add("opened");

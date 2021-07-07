@@ -56,7 +56,7 @@
   }
 }
 
-.advantages__item {
+.advantages li {
   min-height: 299px;
   border: 1px solid $light-grey;
   border-left: 2px solid $blue;
@@ -137,9 +137,9 @@
   }
 }
 
-.advantages__item:hover svg,
-.advantages__item:hover dd,
-.advantages__item:hover dt {
+.advantages li:hover svg,
+.advantages li:hover dd,
+.advantages li:hover dt {
   fill: $basic-white;
   color: $basic-white;
 }

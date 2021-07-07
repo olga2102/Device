@@ -140,7 +140,6 @@
   line-height: 16px;
   color: $basic-white;
   cursor: pointer;
-  // padding-left: 35px;
 }
 
 .feedback input,
@@ -152,6 +151,8 @@
   margin-bottom: 10px;
 
   @media (max-width: $mobile-width) {
+    min-width: 290px;
+    width: 100%;
     margin-bottom: 30px;
   }
 

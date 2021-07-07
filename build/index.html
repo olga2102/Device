@@ -42,7 +42,7 @@
       </div>
       <section class="consultation">
         <h2>Печатные платы</h2>
-        <p class="consultation__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
         <a href="#feedback">
           <p class="consultation__link consultation__link--long">Получить бесплатную консультацию</p>
           <p class="consultation__link consultation__link--short">Бесплатная консультация</p>
@@ -58,7 +58,7 @@
       <div class="container">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="advantages__list">
-          <li class="advantages__item">
+          <li>
             <svg width="29" height="35">
               <use xlink:href="img/sprite.svg#timer"></use>
             </svg>
@@ -70,7 +70,7 @@
               </dd>
             </dl>
           </li>
-          <li class="advantages__item">
+          <li>
             <svg width="35" height="35">
               <use xlink:href="img/sprite.svg#suppliers"></use>
             </svg>
@@ -81,7 +81,7 @@
               </dd>
             </dl>
           </li>
-          <li class="advantages__item">
+          <li>
             <svg width="36" height="31">
               <use xlink:href="img/sprite.svg#confidentiality"></use>
             </svg>
@@ -91,7 +91,7 @@
               </dd>
             </dl>
           </li>
-          <li class="advantages__item">
+          <li>
             <svg width="35" height="35">
               <use xlink:href="img/sprite.svg#personalization"></use>
             </svg>
@@ -130,17 +130,35 @@
           <h2>Service Device предлагает следующие товары и услуги</h2>
           <ul>
             <li>
-              <a class="goods__link goods__link--production" href="#">
+              <a href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/production.webp 1x, img/production@2x.webp 2x">
+                  <!-- 1х: 370px/620px; 2x: 740px/1240px -->
+                  <img src="img/production.jpg" srcset="img/production@2x.jpg 2x" width="370" height="620"
+                    alt="Черно-белое фото прозводства печатной платы в увеличенном масштабе">
+                </picture>
                 <p>Производство печатных плат</p>
               </a>
             </li>
             <li>
-              <a class="goods__link goods__link--installation" href="#">
+              <a href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/installation.webp 1x, img/installation@2x.webp 2x">
+                  <!-- 1х: 370px/620px; 2x: 740px/1240px -->
+                  <img src="img/installation.jpg" srcset="img/installation@2x.jpg 2x" width="370" height="620"
+                    alt="Черно-белое фото монтажа печатной платы в увеличенном масштабе">
+                </picture>
                 <p>Монтаж печатных плат</p>
               </a>
             </li>
             <li>
-              <a class="goods__link goods__link--accessories" href="#">
+              <a href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/accessories.webp 1x, img/accessories@2x.webp 2x">
+                  <!-- 1х: 370px/620px; 2x: 740px/1240px -->
+                  <img src="img/accessories.jpg" srcset="img/accessories@2x.jpg 2x" width="370" height="620"
+                    alt="Черно-белое фото светодиодного провода">
+                </picture>
                 <p>Комплектующие для светотехники</p>
               </a>
             </li>
@@ -274,7 +292,7 @@
           <input type="text" name="user" id="user" placeholder="Имя" required>
         </label>
         <label for="phone" aria-label="Поле для ввода номера телефона">
-          <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+          <input type="tel" name="phone" id="phone" placeholder="Телефон" maxlength="18"  required>
         </label>
         <label for="query" aria-label="Поле для ввода вопроса"></label>
         <textarea id="query" name="query" placeholder="Ваш вопрос"></textarea>
