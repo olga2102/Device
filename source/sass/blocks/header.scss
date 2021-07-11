@@ -17,14 +17,18 @@
 .header__wrapper {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
   margin: 0 auto;
-  margin-bottom: 210px;
-  padding-top: 20px;
+  margin-bottom: 223px;
+  padding-top: 38px;
+  z-index: 2;
 
   @media (max-width: $tablet-width) {
+    align-items: flex-start;
     margin-bottom: 115px;
-    padding-top: 20px;
+    padding-top: 25px;
   }
 
   @media (max-width: $mobile-width) {
@@ -75,45 +79,55 @@
 
 .header__wrapper div {
   display: flex;
-  justify-content: space-between;
-  min-width: 46.7%;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 33px;
 
   @media (max-width: $tablet-width) {
     justify-content: flex-end;
+    padding-top: 5px;
+    margin-right: 0;
   }
 }
 
 .header__wrapper p {
   padding: 0 18px;
+  margin: 0;
 
   @media (max-width: $tablet-width) {
     display: none;
   }
 }
 
+.header__logo {
+  margin-right: auto;
+}
+
 .header__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
   color: $basic-white;
 
-  @media (max-width: $tablet-width) {
-    &:not(:last-child) {
-      margin-left: 33px;
+  &:not(:last-child) {
+    margin-right: 70px;
+
+    @media (max-width: $tablet-width) {
+      margin-right: 33px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-right: 26px;
     }
   }
 
   &:hover {
     color: $blue;
-  }
-
-  &--phone {
-    margin-left: 35px;
   }
 
   &--call {
@@ -145,7 +159,7 @@
 .header__scroll {
   @include button-reset;
   position: absolute;
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -153,12 +167,16 @@
   color: $basic-white;
   cursor: pointer;
   left: 11%;
-  bottom: 15%;
+  bottom: 14%;
   transform: rotate(-90deg);
   opacity: 0.5;
 
   @media (max-width: $tablet-width) {
     display: none;
+  }
+
+  &:hover {
+    color: $blue-hover;
   }
 }
 

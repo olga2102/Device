@@ -1,6 +1,7 @@
 .social {
   @include list-reset;
   display: flex;
+  flex-wrap: wrap;
 
   @media (max-width: $tablet-width) {
     margin-top: 0;

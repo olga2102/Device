@@ -8,6 +8,7 @@
   left: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
 
   &--opened {
     display: flex;
@@ -22,7 +23,7 @@
   min-height: 605px;
   background-color: $blue;
   padding: 35px 40px;
-  z-index: 2;
+  z-index: 11;
 
   @media (max-width: $mobile-width) {
     width: 100%;
@@ -39,7 +40,7 @@
 }
 
 .modal p {
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -81,7 +82,7 @@
 
 .modal input::placeholder,
 .modal textarea::placeholder {
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -141,7 +142,7 @@ input[type="checkbox"]:checked + span::before {
 .modal label {
   position: relative;
   display: block;
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

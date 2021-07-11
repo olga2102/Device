@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 
   @media (max-width: $tablet-width) {
     width: 70%;
@@ -68,7 +69,7 @@
 
 .consultation h2 + p {
   position: relative;
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 22px;

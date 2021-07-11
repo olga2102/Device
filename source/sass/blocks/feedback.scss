@@ -69,7 +69,7 @@
 }
 
 .feedback__form {
-  width: 48%;
+  width: 49%;
 
   @media (max-width: $tablet-width) {
     width: 100%;
@@ -100,7 +100,7 @@
 }
 
 .feedback p {
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -133,18 +133,23 @@
 .feedback label {
   position: relative;
   display: block;
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
   color: $basic-white;
   cursor: pointer;
+  flex-grow: 1;
+
+  &:first-child {
+    margin-right: 30px;
+  }
 }
 
 .feedback input,
 .feedback textarea {
-  min-width: 270px;
+  width: 100%;
   background-color: $opacity-white;
   border: none;
   padding: 17px 16px;
@@ -178,7 +183,7 @@
 
 .feedback input::placeholder,
 .feedback textarea::placeholder {
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -198,15 +203,17 @@
   color: $basic-white;
   border: 1px solid $basic-white;
   border-radius: 5px;
-  padding: 14px 69px;
+  padding: 14px 0;
   margin-right: 30px;
+  width: 46%;
 
   @media (max-width: $tablet-width) {
-    padding: 14px 85px;
+    width: 47%;
     margin-right: 35px;
   }
 
   @media (max-width: $mobile-width) {
+    width: 100%;
     margin-bottom: 35px;
     margin-right: 0;
   }
@@ -254,4 +261,8 @@ input[type="checkbox"]:focus + span::before {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+.feedback__inner label {
+  order: 1;
 }

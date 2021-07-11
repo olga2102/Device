@@ -48,7 +48,7 @@
     background-image: url("../img/grey-triangle.svg");
     background-repeat: no-repeat;
     transform: rotate(180deg);
-    z-index: 0;
+    z-index: -1;
 
     @media (max-width: $tablet-width) {
       display: none;
@@ -115,7 +115,7 @@
 }
 
 .advantages dd {
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

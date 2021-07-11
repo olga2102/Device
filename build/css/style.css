@@ -114,14 +114,18 @@ img {
 .header__wrapper {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
   margin: 0 auto;
-  margin-bottom: 210px;
-  padding-top: 20px; }
+  margin-bottom: 223px;
+  padding-top: 38px;
+  z-index: 2; }
   @media (max-width: 1023px) {
     .header__wrapper {
+      align-items: flex-start;
       margin-bottom: 115px;
-      padding-top: 20px; } }
+      padding-top: 25px; } }
   @media (max-width: 767px) {
     .header__wrapper {
       padding-top: 15px;
@@ -162,35 +166,45 @@ img {
 
 .header__wrapper div {
   display: flex;
-  justify-content: space-between;
-  min-width: 46.7%; }
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 33px; }
   @media (max-width: 1023px) {
     .header__wrapper div {
-      justify-content: flex-end; } }
+      justify-content: flex-end;
+      padding-top: 5px;
+      margin-right: 0; } }
 
 .header__wrapper p {
-  padding: 0 18px; }
+  padding: 0 18px;
+  margin: 0; }
   @media (max-width: 1023px) {
     .header__wrapper p {
       display: none; } }
+
+.header__logo {
+  margin-right: auto; }
 
 .header__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
   color: white; }
-  @media (max-width: 1023px) {
-    .header__link:not(:last-child) {
-      margin-left: 33px; } }
+  .header__link:not(:last-child) {
+    margin-right: 70px; }
+    @media (max-width: 1023px) {
+      .header__link:not(:last-child) {
+        margin-right: 33px; } }
+    @media (max-width: 767px) {
+      .header__link:not(:last-child) {
+        margin-right: 26px; } }
   .header__link:hover {
     color: #00b2ff; }
-  .header__link--phone {
-    margin-left: 35px; }
   .header__link--call {
     font-family: "Roboto Condensed", monospace;
     font-style: normal;
@@ -216,7 +230,7 @@ img {
   background-color: transparent;
   border: none;
   position: absolute;
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -224,12 +238,14 @@ img {
   color: white;
   cursor: pointer;
   left: 11%;
-  bottom: 15%;
+  bottom: 14%;
   transform: rotate(-90deg);
   opacity: 0.5; }
   @media (max-width: 1023px) {
     .header__scroll {
       display: none; } }
+  .header__scroll:hover {
+    color: #0a7eaf; }
 
 @media (max-width: 1023px) {
   .header svg {
@@ -240,7 +256,7 @@ img {
   display: flex;
   justify-content: space-between;
   width: 204px;
-  height: 86px; }
+  height: 52px; }
   @media (max-width: 1023px) {
     .logo {
       width: 202px;
@@ -253,9 +269,11 @@ img {
     width: 216px;
     height: 52px; }
 
-@media (max-width: 767px) {
-  .logo__img--text {
-    display: none; } }
+.logo__img--text {
+  height: 45px; }
+  @media (max-width: 767px) {
+    .logo__img--text {
+      display: none; } }
 
 @media (max-width: 767px) {
   .logo__img--picture {
@@ -273,7 +291,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 10px; }
   @media (max-width: 1023px) {
     .consultation {
       width: 70%;
@@ -327,7 +346,7 @@ img {
 
 .consultation h2 + p {
   position: relative;
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
@@ -570,7 +589,7 @@ img {
         transform: translateY(-50%); } }
 
 .footer a {
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -580,7 +599,7 @@ img {
     color: #00b2ff; }
 
 .footer__copyright-inner p {
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -588,7 +607,7 @@ img {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: rgba(45, 56, 63, 0.5);
-  margin: 0; }
+  margin: 0 10px 0 0; }
   .footer__copyright-inner p:first-child {
     margin-right: 70px; }
     @media (max-width: 1023px) {
@@ -641,18 +660,15 @@ img {
       margin: 26px 0; } }
 
 .footer address {
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 25px;
-  color: rgba(45, 56, 63, 0.5);
-  cursor: pointer; }
+  color: rgba(45, 56, 63, 0.5); }
   @media (max-width: 767px) {
     .footer address {
       padding-right: 20px; } }
-  .footer address:hover {
-    color: #00b2ff; }
 
 .footer__copyright-inner {
   display: flex; }
@@ -664,7 +680,8 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
   @media (max-width: 1023px) {
     .social {
       margin-top: 0; } }
@@ -728,7 +745,7 @@ img {
     background-image: url("../img/grey-triangle.svg");
     background-repeat: no-repeat;
     transform: rotate(180deg);
-    z-index: 0; }
+    z-index: -1; }
     @media (max-width: 1023px) {
       .advantages ul::before {
         display: none; } }
@@ -777,7 +794,7 @@ img {
       margin-bottom: 10px; } }
 
 .advantages dd {
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -831,7 +848,7 @@ img {
     width: 220px;
     height: 317px;
     top: 0;
-    left: 7%;
+    left: 6.3%;
     background-image: url("../img/year.svg");
     background-repeat: no-repeat; }
     @media (max-width: 1023px) {
@@ -863,7 +880,7 @@ img {
       margin: 0 0 18px; } }
 
 .info p {
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -956,9 +973,12 @@ img {
 
 .goods li {
   width: 32%;
-  min-height: 620px; }
+  min-height: 620px;
+  margin-bottom: 7px; }
   .goods li:not(:last-child) {
     margin-right: 2%; }
+  .goods li:nth-child(3n) {
+    margin-right: 0; }
   @media (max-width: 1023px) {
     .goods li {
       width: 100%;
@@ -1005,18 +1025,14 @@ img {
     outline: 1px solid #0a7eaf; }
 
 .goods img {
-  opacity: 0.2; }
+  height: 100%;
+  opacity: 0.3;
+  object-fit: cover; }
   @media (max-width: 1023px) {
     .goods img {
       width: 100%;
       height: 256px;
-      object-fit: cover;
-      object-position: center; }
-      .goods img:first-child {
-        object-fit: fill; } }
-
-li:first-child img {
-  object-fit: fill; }
+      object-position: center; } }
 
 .goods p {
   position: absolute;
@@ -1092,7 +1108,7 @@ li:first-child img {
         display: none; } }
 
 .feedback__form {
-  width: 48%; }
+  width: 49%; }
   @media (max-width: 1023px) {
     .feedback__form {
       width: 100%;
@@ -1117,7 +1133,7 @@ li:first-child img {
       font-size: 28px; } }
 
 .feedback p {
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -1145,17 +1161,20 @@ li:first-child img {
 .feedback label {
   position: relative;
   display: block;
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
   color: white;
-  cursor: pointer; }
+  cursor: pointer;
+  flex-grow: 1; }
+  .feedback label:first-child {
+    margin-right: 30px; }
 
 .feedback input,
 .feedback textarea {
-  min-width: 270px;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   padding: 17px 16px;
@@ -1184,7 +1203,7 @@ li:first-child img {
 
 .feedback input::placeholder,
 .feedback textarea::placeholder {
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -1204,14 +1223,16 @@ li:first-child img {
   color: white;
   border: 1px solid white;
   border-radius: 5px;
-  padding: 14px 69px;
-  margin-right: 30px; }
+  padding: 14px 0;
+  margin-right: 30px;
+  width: 46%; }
   @media (max-width: 1023px) {
     .feedback button {
-      padding: 14px 85px;
+      width: 47%;
       margin-right: 35px; } }
   @media (max-width: 767px) {
     .feedback button {
+      width: 100%;
       margin-bottom: 35px;
       margin-right: 0; } }
   .feedback button:hover {
@@ -1251,6 +1272,9 @@ input[type="checkbox"]:focus + span::before {
       flex-direction: column;
       align-items: flex-start; } }
 
+.feedback__inner label {
+  order: 1; }
+
 @media (max-width: 767px) {
   .accordion--opened {
     display: grid; }
@@ -1266,7 +1290,8 @@ input[type="checkbox"]:focus + span::before {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10; }
   .modal--opened {
     display: flex;
     justify-content: center;
@@ -1278,7 +1303,7 @@ input[type="checkbox"]:focus + span::before {
   min-height: 605px;
   background-color: #00b2ff;
   padding: 35px 40px;
-  z-index: 2; }
+  z-index: 11; }
   @media (max-width: 767px) {
     .modal__inner {
       width: 100%; } }
@@ -1292,7 +1317,7 @@ input[type="checkbox"]:focus + span::before {
   margin: 0 0 25px; }
 
 .modal p {
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -1326,7 +1351,7 @@ input[type="checkbox"]:focus + span::before {
 
 .modal input::placeholder,
 .modal textarea::placeholder {
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -1379,7 +1404,7 @@ input[type="checkbox"]:checked + span::before {
 .modal label {
   position: relative;
   display: block;
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

@@ -53,6 +53,7 @@
     "node": "14.15.0"
   },
   "dependencies": {
+    "focus-trap": "^6.6.0",
     "uglify-es": "^3.3.9"
   }
 }

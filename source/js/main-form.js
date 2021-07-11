@@ -3,9 +3,7 @@ const modal = document.querySelector(".modal");
 const closeButton = document.querySelector(".modal__close-button");
 const body =  document.querySelector(".page__body");
 const userName = document.querySelector("#user");
-const userPhoneNumber = document.querySelector("#phone");
-const message = document.querySelector("#query");
-const form = document.querySelector("form");
+const forms = document.querySelectorAll("form");
 
 const removeClass = () => {
   modal.classList.remove("modal--opened");
@@ -47,22 +45,28 @@ modal.addEventListener("click", (evt) => {
   }
 });
 
-form.addEventListener("submit", (evt) => {
-  if (!userName.value || !userPhoneNumber.value || !message.value) {
-    evt.preventDefault();
-  } else {
-    localStorage.setItem("tel", userName.value);
-    localStorage.setItem("email", userPhoneNumber.value);
-    localStorage.setItem("message", message.value);
-  }
-});
-
-const initMaskNubmer = () => {
-  let maskOptions = {
+const initMaskNubmer = (phone) => {
+  const maskOptions = {
     mask: "+{7} (000) 000-00-00"
   };
 
-  let mask = IMask(userPhoneNumber, maskOptions);
+  const mask = IMask(phone, maskOptions);
 }
 
-initMaskNubmer();
+forms.forEach(form => {
+  const name = form.querySelector('input[type=text]');
+  const phone = form.querySelector('input[type=tel]');
+  const message = form.querySelector('textarea');
+
+  initMaskNubmer(phone);
+
+  form.addEventListener("submit", (evt) => {
+    if (!name.value || !phone.value || !message.value) {
+      evt.preventDefault();
+    } else {
+      localStorage.setItem("name", name.value);
+      localStorage.setItem("tel", phone.value);
+      localStorage.setItem("message", message.value);
+    }
+  });
+})
