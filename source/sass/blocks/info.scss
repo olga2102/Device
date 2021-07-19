@@ -35,11 +35,11 @@
     height: 317px;
     top: 0;
     left: 6.3%;
-    background-image: url("../../img/year.png");
+    background-image: url("../img/year.png");
     background-repeat: no-repeat;
 
     @media (max-width: $tablet-width) {
-      background-image: url("../../img/year-tablet.png");
+      background-image: url("../img/year-tablet.png");
       width: 250px;
       height: 362px;
       left: -4%;

@@ -9,6 +9,7 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
+  overflow-y: scroll;
 
   &--opened {
     display: flex;
@@ -23,6 +24,7 @@
   min-height: 605px;
   background-color: $blue;
   padding: 35px 40px;
+  margin-top: 25%;
   z-index: 11;
 
   @media (max-width: $mobile-width) {
@@ -70,6 +72,7 @@
   padding: 15px 25px;
   background-color: $opacity-white;
   border: none;
+  resize: none;
 
   @media (max-width: $mobile-width) {
     margin-bottom: 30px;

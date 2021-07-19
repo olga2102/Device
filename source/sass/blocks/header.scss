@@ -3,7 +3,7 @@
   background-image: url("../img/mask.png");
   background-color: $background-grey;
   min-height: 878px;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @media (max-width: $tablet-width) {
     min-height: 686px;
@@ -18,7 +18,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
   margin-bottom: 223px;
@@ -42,7 +42,7 @@
     width: 705px;
     height: 515px;
     top: 255px;
-    right: -75px;
+    right: -6%;
     background-image: url("../img/printed-boards.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -113,6 +113,7 @@
   font-size: 16px;
   line-height: 18px;
   color: $basic-white;
+  margin-bottom: 7px;
 
   &:not(:last-child) {
     margin-right: 70px;
@@ -131,7 +132,7 @@
   }
 
   &--call {
-    font-family: "Roboto Condensed", monospace;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -159,6 +160,9 @@
 .header__scroll {
   @include button-reset;
   position: absolute;
+  left: 13%;
+  bottom: 14%;
+  display: inline-block;
   font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
@@ -166,10 +170,10 @@
   line-height: 16px;
   color: $basic-white;
   cursor: pointer;
-  left: 11%;
-  bottom: 14%;
   transform: rotate(-90deg);
   opacity: 0.5;
+  vertical-align: middle;
+  margin-left: -35px;
 
   @media (max-width: $tablet-width) {
     display: none;

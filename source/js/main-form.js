@@ -4,6 +4,7 @@ const closeButton = document.querySelector(".modal__close-button");
 const body =  document.querySelector(".page__body");
 const userName = document.querySelector("#user");
 const forms = document.querySelectorAll("form");
+// const tabs = document.querySelectorAll("[tabindex ='0']");
 
 const removeClass = () => {
   modal.classList.remove("modal--opened");
@@ -16,9 +17,13 @@ const getAllClass = (str) => {
 }
 
 buttonCall.addEventListener("click", () => {
+
   modal.classList.add("modal--opened");
   body.classList.add("page__body--lock");
   userName.focus();
+  // tabs.forEach(tab => {
+  //   tab.tabindex = -1;
+  // });
 });
 
 closeButton.addEventListener("click", () => {
